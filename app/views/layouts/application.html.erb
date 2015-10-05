@@ -3,6 +3,7 @@
 <head>
   <title>Rails and rack-cache demo</title>
   <%= stylesheet_link_tag 'application', media: 'all' %>
+  <%= javascript_include_tag 'application' %>
   <%= csrf_meta_tags %>
 </head>
 <body class="container">
@@ -16,6 +17,7 @@
   <li role="presentation"><%= link_to 'Public', public_path %></li>
   <li role="presentation"><%= link_to 'Private', private_path %></li>
   <li role="presentation"><%= link_to 'Shared only', shared_only_path %></li>
+  <li role="presentation"><%= link_to 'Some AJAX shenanigans', bit_of_ajax_path %></li>
 </ul>
 
 <div class="panel panel-primary">

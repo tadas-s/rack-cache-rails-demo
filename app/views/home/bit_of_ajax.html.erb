@@ -1,0 +1,12 @@
+<% content_for :heading do %>
+    AJAX tricks
+<% end %>
+
+<div ng-app="app" ng-controller="Calculator">
+  <form ng-submit="result = calc(a, b)">
+    <p>a: <input ng-model="a" required></p>
+    <p>b: <input ng-model="b" required></p>
+    <p>result: {{result}}</p>
+    <input type="submit" value="Calculate">
+  </form>
+</div>

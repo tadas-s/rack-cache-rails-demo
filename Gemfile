@@ -25,6 +25,8 @@ gem 'rack-cache', '~> 1.2'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '~> 3.3.5'
+  gem 'rails-assets-angular', '~> 1.4.7'
+  gem 'rails-assets-angular-resource', '~> 1.4.7'
 end
 
 group :development, :test do

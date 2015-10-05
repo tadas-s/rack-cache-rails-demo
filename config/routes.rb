@@ -6,5 +6,7 @@ Rails.application.routes.draw do
     get 'public'
     get 'private'
     get 'shared_only'
+    get 'bit_of_ajax'
+    post 'api_example_1'
   end
 end

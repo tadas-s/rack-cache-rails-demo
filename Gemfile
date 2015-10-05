@@ -21,6 +21,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'rack-cache', '~> 1.2'
 
 source 'https://rails-assets.org' do
   gem 'rails-assets-bootstrap', '~> 3.3.5'

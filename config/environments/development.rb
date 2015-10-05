@@ -10,8 +10,15 @@ Rails.application.configure do
   config.eager_load = false
 
   # Show full error reports and disable caching.
-  config.consider_all_requests_local       = true
-  config.action_controller.perform_caching = false
+  config.consider_all_requests_local = true
+
+  # for rack-cache demo purposes
+  config.action_controller.perform_caching = true
+  config.action_dispatch.rack_cache = {
+    metastore: 'heap:/',
+    entitystore: 'heap:/',
+    verbose: true
+  }
 
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false

@@ -1,0 +1,7 @@
+<% content_for :heading do %>
+    Cache-Control: max-age=0, public, s-maxage=300
+<% end %>
+
+For content that applies to all users, maybe is expensive to generate. Will be cached server side only. Browsers
+will keep sending requests on each reload but rack-cache will respond with <code>304 Not Modified</code> thus saving
+network bandwidth. This also leaves move control over invalidation.

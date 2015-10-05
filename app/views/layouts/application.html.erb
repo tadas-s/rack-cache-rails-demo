@@ -5,9 +5,32 @@
   <%= stylesheet_link_tag 'application', media: 'all' %>
   <%= csrf_meta_tags %>
 </head>
-<body>
+<body class="container">
 
-<%= yield %>
+<div class="page-header">
+  <h1>HTTP Caching with Rails, rack-cache <small>and all the rest</small></h1>
+</div>
+
+<ul class="nav nav-pills">
+  <li role="presentation"><%= link_to 'No cache', nocache_path %></li>
+  <li role="presentation"><%= link_to 'Public', public_path %></li>
+  <li role="presentation"><%= link_to 'Private', private_path %></li>
+  <li role="presentation"><%= link_to 'Shared only', shared_only_path %></li>
+</ul>
+
+<div class="panel panel-primary">
+  <div class="panel-heading">
+    <h3 class="panel-title"><%= yield :heading %></h3>
+  </div>
+
+  <div class="panel-body">
+    <%= yield %>
+  </div>
+
+  <div class="panel-footer">
+    Time this page was generated: <strong><%= time_tag Time.now %></strong>
+  </div>
+</div>
 
 </body>
 </html>
